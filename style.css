@@ -14,12 +14,24 @@ a {
 }
 
 a:hover {
-    color: #ff6f61; /* Red */
+    color: #ff6f61; /*d */
 }
 
 .header-container {
     display: flex;
+    gap:100px;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.footer-content {
+    display: flex;
+    gap:270px;
+    justify-content: center;
+    align-items: center;
+}
+
 
 header {
     font-size: 16px;
@@ -29,6 +41,13 @@ header {
     align-items: center;
 }
 
+footer{
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0b0c10;
+}
+
 #nav-logo {
     height: 120px;
     padding: 20px;
@@ -36,9 +55,8 @@ header {
     border-radius: 100%;
 }
 
-.nav-items {
+.nav-items,.footer-items {
     font-size: large;
-    flex: 1;
     text-align: center;
     color: #66fcf1;
     padding-left: 10px;
@@ -322,5 +340,3 @@ body {
 .label:hover {
     transform: scale(1.1);
 }
-
-/*Contact Form Below */
