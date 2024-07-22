@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{ url_for('info') }}" class="nav-items">
+            <h3>INFORMATION PAGE</h3>
+        </a>
+        <a href="{{ url_for('idea') }}" class="nav-items">
+            <h3>IDEA BOX</h3>
+        </a>
+        <a href="{{ url_for('contact') }}" class="nav-items">
+            <h3>CONTACT US</h3>
+        </a>
+    </header>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <h1>Data Analysis of Your File <br><br></h1>
+            <div class="buttons-wrapper">
+                <div class="button-container">
+                    <a href="{{ url_for('logistic') }}" class="button">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a6680c58-4264-4cbb-ae77-fcc9d2741dc8/BXuD054WDa.json" background="##fff" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Logistic Regression</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('lasso') }}" class="button">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a6680c58-4264-4cbb-ae77-fcc9d2741dc8/BXuD054WDa.json" background="##fff" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Lasso Regression</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('ridge') }}" class="button">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a6680c58-4264-4cbb-ae77-fcc9d2741dc8/BXuD054WDa.json" background="##fff" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Ridge Regression</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('svr') }}" class="button">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a6680c58-4264-4cbb-ae77-fcc9d2741dc8/BXuD054WDa.json" background="##fff" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+                        <span>SV Regression</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('rforest') }}" class="button">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a6680c58-4264-4cbb-ae77-fcc9d2741dc8/BXuD054WDa.json" background="##fff" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Random Forest Regression</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('mlp') }}" class="button">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/a6680c58-4264-4cbb-ae77-fcc9d2741dc8/BXuD054WDa.json" background="##fff" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+                        <span>MLP Regression</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('link') }}" class="go-back-button">Go Back</a>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer-content">
+        <a href="https://www.instagram.com/teni.chintham_/?next=%2F" class="footer-items" target="_blank">
+            <lottie-player src="https://lottie.host/c7456864-fbbf-4d6a-83e1-27efa98f4817/kWfq9nygXe.json" background="##fff" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+        <a href="https://www.linkedin.com/in/tenidharchintham/" class="footer-items" target="_blank">
+            <lottie-player src="https://lottie.host/26cf3eff-0c59-42ae-875f-e16f7b5960c4/hqX6c3chs2.json" background="##22292F" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+        <a href="contact.html" class="footer-items">
+            <lottie-player src="https://lottie.host/82bc27be-9958-4961-aa38-063ca9791eba/05wjoccV22.json" background="##FFFFFF" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+    </footer>
+</body>
+
+</html>

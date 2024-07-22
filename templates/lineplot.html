@@ -1,0 +1,42 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Here is your Generated Line Plot<br></h1>
+<p>A line plot (or line chart) displays data points connected by straight line segments.<br><br></p>
+
+<h2>What is a Line Plot?<br></h2>
+<p>A <strong>Line Plot</strong> shows how data changes over time or other continuous intervals.<br>It's useful for visualizing trends or changes in data values.<br><br></p>
+
+<h2>How to Read a Line Plot?<br></h2>
+<p>In a line plot, each data point is connected by a line, illustrating the data's progression.<br>It helps to see trends, patterns, and changes in data over time or other ordered categories.<br><br></p>
+
+<h3>Generate Line Plot</h3>
+<p>Select columns for the X and Y axes to generate a line plot.<br><br></p>
+
+
+<form action="/lineplot" method="POST">
+    <label for="x_column">Select X-axis column:</label>
+    <select name="x_column" id="x_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="y_column"><br>Select Y-axis column:</label>
+    <select name="y_column" id="y_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+
+    <p><br></p>
+
+    <button type="submit">Generate Line Plot</button>
+</form>
+{% endblock %}
+
+{% block image %}
+{% if graph_url %}
+    <img src="{{ graph_url }}" alt="Line Plot" style="width: 100%; height: auto; border-radius: 10px;">
+{% endif %}
+{% endblock %}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{ url_for('info') }}" class="nav-items">
+            <h3>INFORMATION PAGE</h3>
+        </a>
+        <a href="{{ url_for('idea') }}" class="nav-items">
+            <h3>IDEA BOX</h3>
+        </a>
+        <a href="{{ url_for('contact') }}" class="nav-items">
+            <h3>CONTACT US</h3>
+        </a>
+    </header>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <h1>Data Analysis of Your File <br><br></h1>
+            <div class="buttons-wrapper">
+                <div class="button-container">
+                    <a href="{{ url_for('heatmap') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                        <dotlottie-player src="https://lottie.host/55ad747c-6ddb-4d63-8bfb-8ef98e1f7ed8/0rQO7358dS.json" background="transparent" speed="2" style="width: 200px; height: 200px;"  autoplay></dotlottie-player>
+                        <span>Heatmap</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('bargraph') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                        <dotlottie-player src="https://lottie.host/5fa7e98e-a899-4c55-b93f-dab9d3a9f2ae/c2TyZ1gO3y.json" background="transparent" speed="1" style="width: 200px; height: 200px;"  autoplay></dotlottie-player>
+                        <span>Bar Plot</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('piechart') }}" class="button">
+                        <lottie-player src="https://lottie.host/dc1e5480-59b4-4e53-9124-6379d99b4d28/Q5XDmS6kTT.json" background="##FFFFFF" speed="1" style="width: 200px; height: 200px"  autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Pie Chart</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('boxplot') }}" class="button">
+                        <lottie-player src="https://lottie.host/57f1b0b6-145d-4d77-9bc5-9fa10605ad1a/0FLHCKFqLT.json" background="##5D9DAD" speed="1" style="width: 200px; height: 200px"  autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Box Plot</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('scatterplot') }}" class="button">
+                        <lottie-player src="https://lottie.host/b14c404f-2454-4736-a714-725efb57746d/jYQOXFiYTm.json" background="##ffffff" speed="1" style="width: 200px; height: 200px"  autoplay direction="1" mode="normal"></lottie-player>
+                        <span>Scatter Plot</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('lineplot') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                        <dotlottie-player src="https://lottie.host/fb505ae9-0a0e-424a-a1dc-2437f58043e2/EZ1tPmbYkr.json" background="transparent" speed="1" style="width: 200px; height: 200px;"  autoplay></dotlottie-player>
+                        <span>Line Plot</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('link') }}" class="go-back-button">Go Back</a>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer-content">
+        <a href="https://www.instagram.com/teni.chintham_/?next=%2F" class="footer-items" target="_blank">
+            <lottie-player src="https://lottie.host/c7456864-fbbf-4d6a-83e1-27efa98f4817/kWfq9nygXe.json" background="##fff" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+        <a href="https://www.linkedin.com/in/tenidharchintham/" class="footer-items" target="_blank">
+            <lottie-player src="https://lottie.host/26cf3eff-0c59-42ae-875f-e16f7b5960c4/hqX6c3chs2.json" background="##22292F" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+        <a href="contact.html" class="footer-items">
+            <lottie-player src="https://lottie.host/82bc27be-9958-4961-aa38-063ca9791eba/05wjoccV22.json" background="##FFFFFF" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+    </footer>
+</body>
+
+</html>
+
+
+

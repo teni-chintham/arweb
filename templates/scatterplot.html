@@ -1,0 +1,47 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Here is your Generated Scatter Plot<br></h1>
+<p>A scatter plot is a type of plot that shows the relationship between two variables.<br><br></p>
+
+<h2>What is a Scatter Plot?<br></h2>
+<p>A <strong>Scatter Plot</strong> uses dots to represent data points in a Cartesian plane.<br>It's used to assess relationships and trends between variables.<br><br></p>
+
+<h2>How to Read a Scatter Plot?<br></h2>
+<p>In a scatter plot, each dot represents a data point with its x-axis (horizontal) and y-axis (vertical) position.<br>Patterns in the scatter plot can indicate correlations or trends between variables.<br><br></p>
+
+<h3>Generate Scatter Plot</h3>
+<p>Select columns for the X and Y axes, and choose the type of plot to generate.<br><br></p>
+
+<form action="/scatterplot" method="POST">
+    <label for="x_column">Select X-axis column:</label>
+    <select name="x_column" id="x_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="y_column"><br>Select Y-axis column:</label>
+    <select name="y_column" id="y_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="z_column"><br>Select plot type:</label>
+    <select name="z_column" id="z_column">
+        <option value="Scatter">Scatter Plot</option>
+        <option value="Regression">Regression Plot (Scatter with Trendline)</option>
+    </select>
+    
+    <p><br></p>
+
+    <button type="submit">Generate Scatter Plot</button>
+</form>
+{% endblock %}
+
+{% block image %}
+{% if graph_url %}
+    <img src="{{ graph_url }}" alt="Scatter Plot" style="width: 100%; height: auto; border-radius: 10px;">
+{% endif %}
+{% endblock %}

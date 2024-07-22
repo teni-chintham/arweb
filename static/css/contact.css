@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #66fcf1;
+    transition: color ease 0.5s;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+body {
+    background-color: #1f2833;
+    color: #c5c6c7;
+    background: url('../images/rm378-02c.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; 
+}
+
+.header-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+}
+
+#nav-logo {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.nav-items {
+    font-size: large;
+    color: #66fcf1;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+    .header-container {
+        gap: 30px;
+    }
+    .nav-items {
+        font-size: medium;
+    }
+}
+
+
+.footer-content {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+
+.footer-items {
+    font-size: large;
+    text-align: center;
+    color: #66fcf1;
+    padding: 10px;
+}
+
+@media screen and (max-width: 760px) {
+    .footer-content {
+        gap: 40px;
+    }
+    .footer-items {
+        font-size: medium;
+    }
+}
+
+body {
+    font-family: "Outfit";
+    color: #c5c6c7;
+}
+
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2 {
+    color: #66fcf1;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #45a29e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: 2px solid #45a29e;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #0b0c10;
+    background-color: #c5c6c7;
+    border-radius: 50px;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #66fcf1;
+}
+
+.contact-inputs::placeholder {
+    color: #1f2833;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #0b0c10;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #66fcf1, #45a29e);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .contact-inputs {
+        width: 80vw;
+    }
+
+    .contact-right {
+        display: none;
+    }
+}

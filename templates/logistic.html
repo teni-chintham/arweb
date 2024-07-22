@@ -1,0 +1,51 @@
+{% extends "baseprediction.html" %}
+
+{% block content %}
+<h1>Logistic Regression</h1>
+<h2>Best Solver: {{ best_solver }} with score: {{ best_score }}%</h2>
+<h3>Solver Scores</h3>
+<table border="1">
+    <tr>
+        <th>Solver</th>
+        <th>Score</th>
+    </tr>
+    {% for solver, score in solver_scores %}
+    <tr>
+        <td>{{ solver }}</td>
+        <td>{{ score }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Make a Prediction</h3>
+<p>Using solver: {{ best_solver }} with score: {{ best_score }}%</p>
+<form action="/logistic" method="post">
+    {% for column in columns %}
+    <label for="{{ column }}">{{ column }}:</label>
+    <input type="text" id="{{ column }}" name="{{ column }}" required><br>
+    {% endfor %}
+    <button type="submit">Predict</button>
+</form>
+
+{% if predictions %}
+<h3>Prediction Results</h3>
+<table border="1">
+    <tr>
+        <th>Date and Time</th>
+        {% for column in columns %}
+        <th>{{ column }}</th>
+        {% endfor %}
+        <th>Predicted Target Value</th>
+    </tr>
+    {% for prediction in predictions %}
+    <tr>
+        <td>{{ prediction['date and time'] }}</td>
+        {% for column in columns %}
+        <td>{{ prediction[column] }}</td>
+        {% endfor %}
+        <td>{{ prediction['predicted target value'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+{% endblock %}

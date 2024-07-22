@@ -1,0 +1,42 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Here is your Generated Bar Graph<br></h1>
+<p>A bar graph is a visual representation of data using bars of different heights or lengths.<br><br></p>
+
+<h2>What is a Bar Graph?<br></h2>
+<p>A <strong>Bar Graph</strong> uses bars to compare quantities or show relationships between different categories of data.<br>Each bar represents a category and the height or length of the bar is proportional to the value it represents.<br><br></p>
+
+<h2>How to Read a Bar Graph?<br></h2>
+<p>In a bar graph, the length or height of each bar indicates the value of the category it represents.<br>It's used to easily visualize and compare data across different categories or groups.<br><br></p>
+
+<h3>Generate Bar Graph</h3>
+<p>Select columns for the X and Y axes to generate a bar graph.<br><br></p>
+
+<form action="/bargraph" method="POST">
+    <label for="x_column">Select X-axis column:</label>
+    <select name="x_column" id="x_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="y_column"><br>Select Y-axis column:</label>
+    <select name="y_column" id="y_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+
+    <p><br></p>
+
+    <button type="submit">Generate Bar Graph</button>
+</form>
+{% endblock %}
+
+{% block image %}
+{% if graph_url %}
+    <img src="{{ graph_url }}" alt="Bar Graph" style="width: 100%; height: auto; border-radius: 10px;">
+{% endif %}
+{% endblock %}
+

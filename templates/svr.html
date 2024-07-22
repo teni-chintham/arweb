@@ -1,0 +1,57 @@
+{% extends "baseprediction.html" %}
+
+{% block content %}
+    <h1>Support Vector Regression (SVR)</h1>
+    <h2>Best Kernel: {{ best_kernel }} with score: {{ best_score }}%</h2>
+
+    <h3>Kernel Scores</h3>
+    <table border="1">
+        <tr>
+            <th>Kernel</th>
+            <th>Score</th>
+        </tr>
+        {% for kernel, score in kernel_scores %}
+        <tr>
+            <td>{{ kernel }}</td>
+            <td>{{ score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Make a Prediction</h3>
+    <p>Using kernel: {{ best_kernel }} with score: {{ best_score }}%</p>
+    <form action="/svr" method="post">
+        {% for column in columns %}
+        <label for="{{ column }}">{{ column }}:</label>
+        <input type="text" id="{{ column }}" name="{{ column }}" required><br>
+        {% endfor %}
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if predictions %}
+    <h3>Prediction Results</h3>
+    <table border="1">
+        <tr>
+            <th>Date and Time</th>
+            {% for column in columns %}
+            <th>{{ column }}</th>
+            {% endfor %}
+            <th>Predicted Target Value</th>
+        </tr>
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{ prediction['date and time'] }}</td>
+            {% for column in columns %}
+            <td>{{ prediction[column] }}</td>
+            {% endfor %}
+            <td>{{ prediction['predicted target value'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+{% endblock %}
+
+{% block image %}
+    <!-- Add any specific Lottie animation or image for the SVR section here -->
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Here is your Generated Heatmap<br></h1>
+<p>A heatmap is a tool visualizes data patterns and correlations using colors.<br><br></p>
+
+<h2>What is a Heatmap?<br></h2>
+<p>A <strong>Heatmap</strong> uses colors to show data values.<br>Brighter colors indicate higher values, helping to spot trends and correlations easily.<br><br></p>
+
+<h2>How to Read a Heatmap?<br></h2>
+<p>In a heatmap, each color represents a data value.It's used to compare variables and identify relationships quickly.</p>
+{% endblock %}
+
+
+{% block image %}
+<img src="{{ heatmap_url }}" alt="Correlation Heatmap" style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

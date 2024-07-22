@@ -1,0 +1,33 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Here is your Generated Pie Chart<br></h1>
+<p>A pie chart is a circular statistical graphic divided into slices to illustrate numerical proportion.<br><br></p>
+
+<h2>What is a Pie Chart?<br></h2>
+<p>A <strong>Pie Chart</strong> uses sectors to show parts of a whole or proportions of different categories.<br>Each slice represents a category and the size of the slice is proportional to the quantity it represents.<br><br></p>
+
+<h2>How to Read a Pie Chart?<br></h2>
+<p>In a pie chart, each slice's size represents the proportion of the whole data set.<br>It's used to visualize and compare proportions or percentages easily.<br><br></p>
+
+<h3>Generate Pie Chart</h3>
+<p>Select a column to generate a pie chart based on its values.<br><br></p>
+
+<form action="/piechart" method="POST">
+    <label for="x_column">Select Variable :</label>
+    <select name="x_column" id="x_column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+    <p><br></p>
+
+    <button type="submit">Generate Pie Chart</button>
+</form>
+{% endblock %}
+
+{% block image %}
+{% if graph_url %}
+    <img src="{{ graph_url }}" alt="Pie Chart" style="width: 100%; height: auto; border-radius: 10px;">
+{% endif %}
+{% endblock %}

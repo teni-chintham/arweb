@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <title>Info-Regressor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+  </head>
+
+  <body>
+
+    <header class="header-container">
+        <script id="nav-logo" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{url_for('home')}}" class="nav-items"><h3>THE REGESSOR</h3></a>
+        <a href="{{url_for('idea')}}" class="nav-items"><h3>IDEA BOX</h3></a>
+        <a href="{{url_for('contact')}}" class="nav-items"><h3>CONTACT US</h3></a>
+    </header>
+    
+    
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <img src="https://w0.peakpx.com/wallpaper/17/569/HD-wallpaper-data-display-data-technology-electronics-black-and-blue-display.jpg" alt="Data collection & Processing">
+                <div class="label">Data collection & Processing</div>
+            </div>
+            <div class="slide">
+                <img src="https://w0.peakpx.com/wallpaper/209/106/HD-wallpaper-data-analytics.jpg" alt="Data Analysis and Visualization">
+                <div class="label">Data Analysis and Visualization</div>
+            </div>
+            <div class="slide">
+                <img src="https://w0.peakpx.com/wallpaper/416/75/HD-wallpaper-crm-best-practices-how-to-improve-crm-data-quality-business-analysis.jpg" alt="Data Prediction">
+                <div class="label">Data Prediction</div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/info.js') }}"></script>
+
+    <div id="fax">
+        <h1 class="abt-fax">The Autoregressor<br><br></h1><h2 class="abt-fax">The Autoregressor is a tool that takes in a CSV file of your choice and uses statistical techniques and computer-based equations to help accomplish 3 main tasks!<h2><h1 class="abt-fax"><br>The tasks:<br><br></h1>
+        
+        <div class="abt-fax">
+            <div class="list-items">Data Description will be given initally for a numerical understanding of data it is ok if you dont understand this there is always the use of a heatmap for better visualization.</div>
+            <div class="list-items">Removal of data redundancy and data that may end up harming the overall larger data set.</div>
+            <div class="list-items">This program will help to automatically conduct data analysis by creating various graphs based on the user's demands <b>(Even if your knowledge of data is limited it is completely ok, cumulative graphs exist in this program to help give you an overall view of your data to help you as a user get a better idea of your data) .</b></div>
+            <div class="list-items">Finally, the last and best function of this program is the ability to predict data for you this program will run your data through multiple regression models and output the best model with the best accuracy for you to predict data with if you wish to use a different type of regression with different settings a manual option to pick your regression model and setting is also present!!</div>
+        </div>
+        <br>
+        
+    <div id="reg-type">
+      <h1>This program uses 6 types of regression :<br></h1>
+      
+      <div class="regression">
+          <div class="reg-img">
+              <span class="reg-title">1.) Logistic<br>Regression<br><br></span>
+              <img src="https://miro.medium.com/v2/resize:fit:1020/1*ATQqMGyFcLvC7GfBLOSiBA.jpeg" alt="Logistic Regression" class="reg-img-ex">
+          </div>
+          <div class="reg-info">
+              <p>Logistic regression predicts binary outcomes (e.g., yes/no) by analyzing factors such as study hours to estimate the likelihood of a specific result. It calculates probabilities, predicting one outcome if the probability exceeds 50%, and the other if it doesn’t. It's simple and effective for binary predictions.</p>
+          </div>
+      </div>
+  
+      <div class="regression">
+          <div class="reg-img">
+              <span class="reg-title">2.) Lasso<br>Regression<br><br></span>
+              <img src="https://media.licdn.com/dms/image/D4D12AQGY5mFCxkZiEA/article-cover_image-shrink_720_1280/0/1707271888458?e=2147483647&v=beta&t=vSYLxPPRYvUsyQHtaDAjXs5iiBF09JmF-TwWRSqe_JA" alt="Lasso Regression" class="reg-img-ex">
+          </div>
+          <div class="reg-info">
+              <p>Lasso regression improves linear models by adding a penalty to shrink some coefficients to zero, focusing on the most important features. This simplifies the model, preventing overfitting, and making it more reliable and interpretable, especially when dealing with many factors.</p>
+          </div>
+      </div>
+  
+      <div class="regression">
+          <div class="reg-img">
+              <span class="reg-title">3.) Ridge<br>Regression<br><br></span>
+              <img src="https://visualstudiomagazine.com/-/media/ECG/visualstudiomagazine/Images/introimages/ml.jpg" alt="Ridge Regression" class="reg-img-ex">
+          </div>
+          <div class="reg-info">
+              <p>Ridge regression enhances linear models by slightly reducing all coefficient sizes to avoid overfitting, unlike Lasso regression, which can shrink some to zero. It maintains all factors, making the model more stable and accurate, especially with highly correlated inputs.</p>
+          </div>
+      </div>
+  
+      <div class="regression">
+          <div class="reg-img">
+              <span class="reg-title">4.) Random<br>Forest Regression<br><br></span>
+              <img src="https://miro.medium.com/v2/resize:fit:768/1*lQWibRJ1d2RqwCOeqORFSA.jpeg" alt="Random Forest Regression" class="reg-img-ex">
+          </div>
+          <div class="reg-info">
+              <p>Random forest regression predicts continuous outcomes by averaging results from multiple decision trees built from random data subsets. This method enhances accuracy and reduces overfitting compared to a single tree, effectively handling large datasets and complex relationships.</p>
+          </div>
+      </div>
+  
+      <div class="regression">
+          <div class="reg-img">
+              <span class="reg-title">5.) Support Vector<br>Regression<br><br></span>
+              <img src="https://media.licdn.com/dms/image/D4D12AQEhZ85I-_pfMA/article-cover_image-shrink_720_1280/0/1707272493148?e=2147483647&v=beta&t=z3gCGq4COJmsfzuF3oeYTHbvxgC1YjyM94QF3PeUBzY" alt="Support Vector Regression" class="reg-img-ex">
+          </div>
+          <div class="reg-info">
+              <p>Support Vector Regression predicts continuous values by finding the best-fitting hyperplane in high-dimensional space, minimizing prediction errors. It handles complex, nonlinear relationships effectively, making it suitable for datasets with many features.</p>
+          </div>
+      </div>
+  
+      <div class="regression">
+          <div class="reg-img">
+              <span class="reg-title">6.) Multi-Layer<br>Perceptron<br><br></span>
+              <img src="https://www.trentonsystems.com/hubfs/Neural_Networks.png" alt="Multi-Layer Perceptron" class="reg-img-ex">
+          </div>
+          <div class="reg-info">
+              <p>Ridge regression enhances linear models by slightly reducing all coefficient sizes to avoid overfitting, unlike Lasso regression, which can shrink some to zero. It maintains all factors, making the model more stable and accurate, especially with highly correlated inputs.</p>
+          </div>
+      </div>
+  </div>
+
+    <div id="information">
+        <h2 class="abt-info">Before Proceeding Here Are a Few Key Points You'll Need to Know:<br><br></h2>
+        <div class="abt-info-box">
+            <div class="list-items">
+                The first part of this program is to understand its limitations. This program can only test against one value, the "Target." Don't worry if you already have a target value on your data set; the program will detect it and allow you to proceed with this target or change it. The second limitation is shown in the visual above. This program can only go as far as prediction but is unable to provide prescriptive information.
+            </div>
+            <div class="list-items">
+                If you are unaware of the target, then simply put, it's the value you are testing for <b>(Dependent Variable)</b>. For predictive analysis, this is vital as it needs a target value to predict. <b>Example: In a dataset testing for CHD, the target value would be whether they have CHD or not, and the prediction will reveal the risk of heart disease.</b>
+            </div>
+            <div class="list-items">
+                The next vital focus is understanding regression. In simple terms, regression is the statistical process of finding a correlation between the target and independent variables through mathematical equations and statistical concepts.
+            </div>
+            <div class="list-items">
+                There are a lot of regression models, so predictive analysis <b><u>WILL TAKE TIME TO COMPUTE</u></b>. This is due to the program finding the most accurate setting and type of regression for your data specifically.
+            </div>
+            <div class="list-items">
+                This project is my first, and I am more than open to suggestions for improvement and any feedback. Please reach out by clicking on the "Contact Me" section!
+            </div>
+            <div class="list-items">
+                I have also included an idea box section for any future projects that I might be willing to do in the field of AI/ML or any other tech domain, maybe even expand past computer engineering!!
+            </div>
+        </div>
+    </div>
+
+   
+    
+
+    <footer class="footer-content">
+      <a href="https://www.instagram.com/teni.chintham_/?next=%2F" class="footer-items" target="_blank">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/c7456864-fbbf-4d6a-83e1-27efa98f4817/kWfq9nygXe.json" background="##fff" speed="1" style="width: 50px; height: 50px" loop  autoplay direction="1" mode="normal"></lottie-player>
+      </a>
+      <a href="https://www.linkedin.com/in/tenidharchintham/" class="footer-items" target="_blank">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/26cf3eff-0c59-42ae-875f-e16f7b5960c4/hqX6c3chs2.json" background="##22292F" speed="1" style="width: 50px; height: 50px" loop  autoplay direction="1" mode="normal"></lottie-player>
+      </a>
+      <a href="contact.html" class="footer-items">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/82bc27be-9958-4961-aa38-063ca9791eba/05wjoccV22.json" background="##FFFFFF" speed="1" style="width: 50px; height: 50px" loop  autoplay direction="1" mode="normal"></lottie-player>
+      </a>
+    </footer>
+
+  </body>
+</html>

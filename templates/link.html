@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{ url_for('info') }}" class="nav-items">
+            <h3>INFORMATION PAGE</h3>
+        </a>
+        <a href="{{ url_for('idea') }}" class="nav-items">
+            <h3>IDEA BOX</h3>
+        </a>
+        <a href="{{ url_for('contact') }}" class="nav-items">
+            <h3>CONTACT US</h3>
+        </a>
+    </header>
+
+    <div class="main-content">
+        <div class="info-content">
+            <div class="content-wrapper">
+                <h1>Data Analysis of Your File <br><br></h1>
+                <div class="buttons-wrapper">
+                    <div class="button-container">
+                        <a href="{{ url_for('datamenu') }}" class="button">
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/c8aa8773-2087-4cd3-940a-b631c66b4733/x9CWKHe5iR.json" background="##ffffff" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+                            <span>Data Analytics</span>
+                        </a>
+                    </div>
+                    <div class="button-container">
+                        <a href="{{ url_for('predmenu') }}" class="button">
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/08a22bf7-34a1-4a77-813c-99714abcb448/jVGXVpxUMf.json" background="##ffffff" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+                            <span>Data Prediction</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="{{ url_for('link') }}" class="go-back-button">Go Back</a>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer-content">
+        <a href="https://www.instagram.com/teni.chintham_/?next=%2F" class="footer-items" target="_blank">
+            <lottie-player src="https://lottie.host/c7456864-fbbf-4d6a-83e1-27efa98f4817/kWfq9nygXe.json" background="##fff" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+        <a href="https://www.linkedin.com/in/tenidharchintham/" class="footer-items" target="_blank">
+            <lottie-player src="https://lottie.host/26cf3eff-0c59-42ae-875f-e16f7b5960c4/hqX6c3chs2.json" background="##22292F" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+        <a href="contact.html" class="footer-items">
+            <lottie-player src="https://lottie.host/82bc27be-9958-4961-aa38-063ca9791eba/05wjoccV22.json" background="##FFFFFF" speed="1" style="width: 50px; height: 50px" loop autoplay></lottie-player>
+        </a>
+    </footer>
+</body>
+
+</html>

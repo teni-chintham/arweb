@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Regressor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header-container">
+        <script id="nav-logo" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{ url_for('info') }}" class="nav-items"><h3> INFORMATION PAGE </h3></a>
+        <a href="{{ url_for('idea') }}" class="nav-items"><h3>IDEA BOX</h3></a>
+        <a href="{{ url_for('contact') }}" class="nav-items"><h3>CONTACT US</h3></a>
+    </header>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div class="side-by-side">
+                <div class="info">
+                    <h1>Welcome to the Auto-Regressor</h1>
+                    <p>This is a tool for data analytics and prediction. Hope it helps you out!</p>
+                    <div class="auto-regressor-info">
+                        <h2>What is an Auto-Regressor?</h2>
+                        <p>An <strong>Auto-Regressor</strong> is a type of statistical model used in time series analysis to predict future values based on past observations. It operates by regressing the value of a variable at a specific point in time on its own past values.<br><br></p>
+        
+                        <h3>How Does it Work?</h3>
+                        <p>The fundamental idea behind an auto-regressive model is to utilize the correlation between successive observations in a time series. For instance, if you are predicting stock prices, an auto-regressor might use the prices of the past few days to predict tomorrow's price.<br><br></p>
+        
+                        <h3>Applications</h3>
+                        <ul>
+                            <li><strong>Economics:</strong> Predicting economic indicators such as GDP growth or inflation rates.</li>
+                            <li><strong>Finance:</strong> Forecasting stock prices, interest rates, or other financial metrics.</li>
+                            <li><strong>Weather Forecasting:</strong> Predicting future weather conditions based on historical weather data.</li>
+                            <li><strong>Sales Forecasting:</strong> Projecting future sales based on historical sales data.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="animation">
+                    <div class="lottie-animation">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player src="https://lottie.host/a2f829cc-3040-44fc-ad20-6bdefa9b1af1/F21mUM8qtB.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="{{ url_for('link') }}" class="get-started-btn">Get Started</a>
+        </div>
+    </div>
+
+    <footer class="footer-content">
+        <a href="https://www.instagram.com/teni.chintham_/?next=%2F" class="footer-items" target="_blank">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/c7456864-fbbf-4d6a-83e1-27efa98f4817/kWfq9nygXe.json" background="##fff" speed="1" style="width: 50px; height: 50px" loop autoplay direction="1" mode="normal"></lottie-player>
+        </a>
+        <a href="https://www.linkedin.com/in/tenidharchintham/" class="footer-items" target="_blank">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/26cf3eff-0c59-42ae-875f-e16f7b5960c4/hqX6c3chs2.json" background="##22292F" speed="1" style="width: 50px; height: 50px" loop autoplay direction="1" mode="normal"></lottie-player>
+        </a>
+        <a href="contact.html" class="footer-items">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/82bc27be-9958-4961-aa38-063ca9791eba/05wjoccV22.json" background="##FFFFFF" speed="1" style="width: 50px; height: 50px" loop autoplay direction="1" mode="normal"></lottie-player>
+        </a>
+    </footer>
+</body>
+</html>

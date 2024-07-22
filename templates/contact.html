@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Regressor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+<body>
+    <header class="header-container">
+        <script id="nav-logo" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{ url_for('home') }}" class="nav-items"><h3>THE REGRESSOR</h3></a>
+        <a href="{{ url_for('info') }}" class="nav-items"><h3> INFORMATION PAGE </h3></a>
+        <a href="{{ url_for('idea') }}" class="nav-items"><h3>IDEA BOX</h3></a>
+    </header>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch !!</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="60335b28-2e99-4625-bcac-b70bad945cce">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="contact-right">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/2c1d5942-8158-4dd8-a200-6628b7c57034/9YYymH7NSP.json" speed="1" style="width: 700px; height: 700px" loop  autoplay direction="1" mode="normal" ></lottie-player>
+        </div>
+    </div>
+
+
+    <footer class="footer-content">
+        <a href="https://www.instagram.com/teni.chintham_/?next=%2F" class="footer-items" target="_blank">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/c7456864-fbbf-4d6a-83e1-27efa98f4817/kWfq9nygXe.json" background="##fff" speed="1" style="width: 50px; height: 50px" loop autoplay direction="1" mode="normal"></lottie-player>
+        </a>
+        <a href="https://www.linkedin.com/in/tenidharchintham/" class="footer-items" target="_blank">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/26cf3eff-0c59-42ae-875f-e16f7b5960c4/hqX6c3chs2.json" background="##22292F" speed="1" style="width: 50px; height: 50px" loop autoplay direction="1" mode="normal"></lottie-player>
+        </a>
+        <a href="contact.html" class="footer-items">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/82bc27be-9958-4961-aa38-063ca9791eba/05wjoccV22.json" background="##FFFFFF" speed="1" style="width: 50px; height: 50px" loop autoplay direction="1" mode="normal"></lottie-player>
+        </a>
+    </footer>
+</body>
+</html>
